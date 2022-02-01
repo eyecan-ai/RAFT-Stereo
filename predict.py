@@ -56,8 +56,8 @@ def demo(args):
             image1 = sample["centerrect"]
             image2 = sample["rightrect"]
 
-            cv2.imshow("image", image1)
-            cv2.waitKey(1)
+            # cv2.imshow("image", image1)
+            # cv2.waitKey(1)
 
             image1 = cv2.resize(image1, (0, 0), fx=1 / downsample, fy=1 / downsample)
             image2 = cv2.resize(image2, (0, 0), fx=1 / downsample, fy=1 / downsample)
