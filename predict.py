@@ -53,7 +53,7 @@ def demo(args):
     )
     with torch.no_grad():
 
-        for sample_idx in range(900, len(dataset)):
+        for sample_idx in range(0, len(dataset)):
             sample = dataset[sample_idx]
             image1 = sample["centerrect"]
             image2 = sample["rightrect"]
