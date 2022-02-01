@@ -48,7 +48,9 @@ def demo(args):
 
     downsample = 1
 
-    writer = UnderfolderWriter(folder=args.output_directory)
+    writer = UnderfolderWriter(
+        folder=args.output_directory, extensions_map={"image": "jpg"}
+    )
     with torch.no_grad():
 
         for sample_idx in range(900, len(dataset)):
