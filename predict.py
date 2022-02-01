@@ -79,7 +79,7 @@ def demo(args):
 
             flow_up = TORCH_TO_NP(flow_up)
             flow_up = (-flow_up).astype(np.uint8)
-            flow_up = cv2.normalize(flow_up, None, 0, 255, cv2.NORM_MINMAX)
+            # flow_up = cv2.normalize(flow_up, None, 0, 255, cv2.NORM_MINMAX)
             flow_up = cv2.applyColorMap(flow_up, cv2.COLORMAP_MAGMA)
 
             out_sample = PlainSample(data={"image": flow_up}, id=sample_idx)
