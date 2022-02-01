@@ -83,9 +83,9 @@ def demo(args):
             out_sample = PlainSample(data={"image": flow_up}, id=sample_idx)
             writer.write(SamplesSequence(samples=[out_sample]))
 
-            print(flow_up.min(), flow_up.max())
-            cv2.imshow("flow_up", flow_up)
-            cv2.waitKey(0)
+            # print(flow_up.min(), flow_up.max())
+            # cv2.imshow("flow_up", flow_up)
+            # cv2.waitKey(0)
             # file_stem = imfile1.split("/")[-2]
             # if args.save_numpy:
             #     np.save(
