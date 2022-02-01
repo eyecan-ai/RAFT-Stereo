@@ -17,7 +17,7 @@ from pipelime.sequences.writers.filesystem import UnderfolderWriter
 import cv2
 from pipelime.sequences.samples import PlainSample, SamplesSequence
 
-DEVICE = "cpu"
+DEVICE = "CUDA"
 
 
 def load_image(imfile):
