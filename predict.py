@@ -81,7 +81,7 @@ def demo(args):
             flow_up = (-flow_up).astype(np.uint8)
             # flow_up = cv2.normalize(flow_up, None, 0, 255, cv2.NORM_MINMAX)
             flow_up = cv2.applyColorMap(flow_up, cv2.COLORMAP_MAGMA)
-
+            flow_up = cv2.cvtColor(flow_up, cv2.COLOR_BGR2RGB)
             out_sample = PlainSample(data={"image": flow_up}, id=sample_idx)
             writer(SamplesSequence(samples=[out_sample]))
 
@@ -134,7 +134,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--valid_iters",
         type=int,
-        default=32,
+        default=16,
         help="number of flow-field updates during forward pass",
     )
 
