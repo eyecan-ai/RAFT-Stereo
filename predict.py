@@ -81,7 +81,7 @@ def demo(args):
             flow_up = cv2.applyColorMap(flow_up, cv2.COLORMAP_MAGMA)
 
             out_sample = PlainSample(data={"image": flow_up}, id=sample_idx)
-            writer.write(SamplesSequence(samples=[out_sample]))
+            writer(SamplesSequence(samples=[out_sample]))
 
             # print(flow_up.min(), flow_up.max())
             # cv2.imshow("flow_up", flow_up)
