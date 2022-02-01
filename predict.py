@@ -28,7 +28,7 @@ def load_image(imfile):
 
 def demo(args):
     model = torch.nn.DataParallel(RAFTStereo(args), device_ids=[0])
-    model.load_state_dict(torch.load(args.restore_ckpt, map_location=DEVICE))
+    model.load_state_dict(torch.load(args.restore_ckpt))
 
     model = model.module
     model.to(DEVICE)
